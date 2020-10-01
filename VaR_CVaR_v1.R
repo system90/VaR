@@ -21,7 +21,7 @@ tickers <- c("MSFT", "LONE", "USEG")            # vector of stocks
 weights <- c(0.50, 0.10, 0.40)                # Individual weightings for each stock of portfolio
 getSymbols(tickers, from=maxDate)
 
-Port.prices <- (merge(Ad(MSFT), Ad(LONE), Ad(USEG)))     # Getting the Adjusted closes. Omitting any missing values 
+Port.prices <- (merge(Ad(MSFT), Ad(LONE), Ad(USEG)))     # Getting the Adjusted closes
 Port.prices
 head(Port.prices)
 Port.returns <- ROC(Port.prices, type="discrete")               # ROC: Rate of change (also getting rid of first row, as it contains NA's)
