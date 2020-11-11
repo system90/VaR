@@ -14,7 +14,7 @@ VaR(MSFT.rets, p=0.99, method = "historical")   # 99th percentile for VaR
 
 CVaR(MSFT.rets, p=0.95, method = "historical")  # 95th percentile for CVaR
 CVaR(MSFT.rets, p=0.99, method = "historical")  # 99th percentile for CVaR
-
+CVaR(MSFT.rets, p=0.995, method = "historical")  # 99.5th percentile for CVaR
  
 # Portfolio of stocks
 tickers <- c("MSFT", "LONE", "USEG")            # vector of stocks
@@ -27,6 +27,8 @@ head(Port.prices)
 Port.returns <- ROC(Port.prices, type="discrete")               # ROC: Rate of change (also getting rid of first row, as it contains NA's)
 colnames(Port.returns) <- tickers                               # renaming the headers
 head(Port.returns)                                              # Returns for each of the stocks
+
+
 
 
 
