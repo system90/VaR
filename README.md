@@ -1,2 +1,2 @@
 # VaR
-VaR, CVaR calculations
+Value at Risk, CVaR calculations
